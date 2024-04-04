@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2060565384812104196}
   m_Layer: 0
   m_Name: Zipline (1)
-  m_TagString: Untagged
+  m_TagString: Zipline
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +47,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1384461, y: 2.0120902, z: 0.07517052}
-  m_Center: {x: -0.0013384819, y: -0.0047011375, z: 0.004671097}
+  m_Size: {x: 0.1384461, y: 2.0120902, z: 0.08925629}
+  m_Center: {x: -0.0013384819, y: -0.0047011375, z: -0.002371788}
 --- !u!114 &2060565384812104196
 MonoBehaviour:
   m_ObjectHideFlags: 0
