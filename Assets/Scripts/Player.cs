@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerZipline : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] private float checkOffset = 1f;
     [SerializeField] private float checkRadius = 2f;
