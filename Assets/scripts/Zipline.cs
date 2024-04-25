@@ -23,7 +23,6 @@ public class Zipline : MonoBehaviour
         
         _localZip.GetComponent<Rigidbody>().AddForce((targetZip.zipTransform.position - zipTransform.position).normalized * zipSpeed * Time.deltaTime,
                 ForceMode.Acceleration);
-        Debug.Log("Zipping");
 
         if (Vector3.Distance(_localZip.transform.position, targetZip.zipTransform.position) <= arrivalThreshold)
         {
@@ -61,6 +60,5 @@ public void StartZipline(GameObject player)
         Destroy(_localZip);
         _localZip = null;
         _zipping = false;
-        Debug.Log("Zipline reset");
     }
 }
