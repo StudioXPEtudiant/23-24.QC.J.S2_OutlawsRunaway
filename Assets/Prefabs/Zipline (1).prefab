@@ -63,9 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetZip: {fileID: 0}
-  zipSpeed: 500
+  zipSpeed: 250
   zipScale: 0.2
-  arrivalTreshold: 0.4
+  arrivalThreshold: 0.4
   zipTransform: {fileID: 0}
 --- !u!54 &8819617033547488040
 Rigidbody:
