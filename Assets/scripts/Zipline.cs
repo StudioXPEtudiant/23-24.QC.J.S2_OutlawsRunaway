@@ -16,7 +16,7 @@ public class Zipline : MonoBehaviour
     public Transform zipTransform;
     private bool _zipping = false;
     private GameObject _localZip;
-    private AnimatorController mAnimator;
+    [SerializeField] private Animator mAnimator;
     
     private void Awake()
     {
@@ -50,6 +50,8 @@ public class Zipline : MonoBehaviour
         player.GetComponent<CharacterController>().enabled = false;
         player.transform.parent = _localZip.transform;
         _zipping = true;
+
+        player.GetComponent<Animator>().SetBool("Zipping",true);
     }
 
     private void ResetZipline()
@@ -65,5 +67,7 @@ public class Zipline : MonoBehaviour
         Destroy(_localZip);
         _localZip = null;
         _zipping = false;
+        
+        player.GetComponent<Animator>().SetBool("Zipping",false);
     }
 }

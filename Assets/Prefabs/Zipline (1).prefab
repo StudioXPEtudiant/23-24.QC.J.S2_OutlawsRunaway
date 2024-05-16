@@ -63,11 +63,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetZip: {fileID: 0}
-  zipSpeed: 250
+  zipSpeed: 100
   zipScale: 0.2
   arrivalThreshold: 0.4
   cable: {fileID: 0}
   zipTransform: {fileID: 4383058826123721127}
+  mAnimator: {fileID: 0}
 --- !u!54 &8819617033547488040
 Rigidbody:
   m_ObjectHideFlags: 0
