@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Zipline : MonoBehaviour
@@ -11,11 +12,17 @@ public class Zipline : MonoBehaviour
     [SerializeField] private float zipScale = 0.2f;
 
     [SerializeField] private float arrivalThreshold = 0.4f;
-
+    [SerializeField] private LineRenderer cable;
     public Transform zipTransform;
-
     private bool _zipping = false;
     private GameObject _localZip;
+    private AnimatorController mAnimator;
+    
+    private void Awake()
+    {
+       cable.SetPosition(0, zipTransform.position);
+       cable.SetPosition(1, targetZip.zipTransform.position);
+    }
     
     private void Update()
     {
@@ -28,10 +35,8 @@ public class Zipline : MonoBehaviour
         {
             ResetZipline();
         }
-    }
-
-
-public void StartZipline(GameObject player)
+    } 
+    public void StartZipline(GameObject player)
     {
         _localZip = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         _localZip.transform.position = zipTransform.position;
